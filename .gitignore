@@ -1,0 +1,21 @@
+# Input matrices are regenerated with scripts/generate_inputs.py (hashes in data/manifest.json)
+data/dense/*
+data/sparse/*
+!data/dense/.gitkeep
+!data/sparse/.gitkeep
+
+# Build output
+build/
+*.class
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor
+.vscode/
+
+# Trial runs
+results/test/
