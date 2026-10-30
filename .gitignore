@@ -1,8 +1,5 @@
 # Input matrices are regenerated with scripts/generate_inputs.py (hashes in data/manifest.json)
-data/dense/*
-data/sparse/*
-!data/dense/.gitkeep
-!data/sparse/.gitkeep
+data/dense/
 
 # Build output
 build/
