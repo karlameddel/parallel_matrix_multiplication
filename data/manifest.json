@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "distribution": "uniform [0, 1)",
+    "dtype": "float64 little-endian",
+    "generator": "numpy.random.default_rng (PCG64)",
+    "layout": "row-major, no header",
+    "numpy_version": "2.2.6",
+    "seed": 42,
+    "seed_list": "[seed, n, tag]  (tag 0 = A, 1 = B)"
+  },
+  "dense": {
+    "1000": {
+      "A": "21815a5d768d8bfd910f746aadb79ec08e6d1c272ee29b3e5b4d84d58148e3c1",
+      "B": "48fdd960b0f073dbd98097a1db1e874af6280ac2d77f0ffd00685d03b185cbeb"
+    },
+    "2000": {
+      "A": "c7d69464d1e02fc2e19b9555bfc7898cc7a9ca41b1809dcf0902b442e6457252",
+      "B": "9c42c0c4f89830ecfb3648aa88ceaf3db867cb8692d5d5b80fa83d9159bc526c"
+    },
+    "4000": {
+      "A": "fb0abc9a48d72f3161106a605c09661c0d631765699f71938ee42f50c56e94af",
+      "B": "4eb7bf818fd3e1e8d5c7f463d30cfb9570fb893dbe5afe57dfa59139636ee619"
+    },
+    "500": {
+      "A": "454af704d297f55aab377c432d122ea766b5811ad2f61fc4029f62682d6f6d4b",
+      "B": "dedb05c49a07ca3977fde42078f2ab6cb82a6d535e2918f7d891b2a35a41b6c9"
+    }
+  }
+}
