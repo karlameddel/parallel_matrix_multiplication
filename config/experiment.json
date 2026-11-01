@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "sizes": [500, 1000, 2000, 4000],
+  "threads": [1, 2, 4, 8, 12, 16, 22, 44],
+  "block": 64,
+  "affinity": "none (OS scheduler)",
+  "limits": { "time_s": 300, "mem_bytes": 4294967296, "costly_s": 30 },
+  "java": { "xmx": "4g", "reps": 5, "warmup": 3, "warmup_min_ms": 300, "target_ms": 20 }
+}
