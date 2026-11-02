@@ -1,0 +1,10 @@
+timestamp,method,threads,block,n,status,probe_seconds,peak_memory_bytes,memory_metric,live_heap_bytes_after_gc,array_estimate_bytes,reps,warmup_planned,warmup_iterations,tasks_per_multiplication,active_java_threads,available_processors,logical_processors,physical_cores,oversubscribed,time_limit_s,mem_limit_bytes,affinity,power_plugged,battery_percent,java_version
+2026-11-02T12:05:27,seq,1,64,500,ok,0.0677464,66424832,peak_working_set,7771072,6000000,5,3,6,1,1,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:05:28,par,1,64,500,ok,0.0565015,66760704,peak_working_set,8818312,6000000,5,3,5,8,2,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:05:29,par,2,64,500,ok,0.03993,66596864,peak_working_set,8315272,6000000,5,3,11,8,3,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:05:30,seq,1,64,1000,ok,0.4360863,101101568,peak_working_set,26645448,24000000,5,3,3,1,1,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:05:34,par,1,64,1000,ok,0.4822785,102473728,peak_working_set,26685960,24000000,5,3,3,16,2,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:05:39,par,2,64,1000,ok,0.2601873,103010304,peak_working_set,28197016,24000000,5,3,3,16,3,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:05:41,seq,1,64,2000,ok,3.8071188,245448704,peak_working_set,102142920,96000000,5,3,3,1,1,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:06:19,par,1,64,2000,ok,3.8333503,246419456,peak_working_set,102686784,96000000,5,3,3,32,2,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
+2026-11-02T12:06:53,par,2,64,2000,ok,2.0485541,246845440,peak_working_set,102691592,96000000,5,3,3,32,3,22,22,16,False,300,4294967296,none (OS scheduler),True,97,21.0.6 OpenJDK 64-Bit Server VM
