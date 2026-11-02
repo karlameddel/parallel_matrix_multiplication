@@ -1,0 +1,10 @@
+method,threads,largest_tested_ok_n,largest_attempted_n,first_failure
+par,1,4000,4000,
+par,2,4000,4000,
+par,4,4000,4000,
+par,8,4000,4000,
+par,12,4000,4000,
+par,16,4000,4000,
+par,22,4000,4000,
+par,44,4000,4000,
+seq,1,4000,4000,
