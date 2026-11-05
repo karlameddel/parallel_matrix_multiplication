@@ -10,7 +10,9 @@ multiplication), with the interquartile range (IQR) as variability.
 
 Usage: python scripts/make_report_assets.py [--in-dir results]
 Writes into <in-dir>: summary_time.csv, speedup.csv, memory.csv, limits.csv and
-time_vs_threads.png, speedup.png, efficiency.png
+time_vs_threads.png, speedup.png, efficiency.png.
+If <in-dir>/repeat*/raw_measurements.csv exist (extra runs of seq and par with 1 and 2 threads in
+new JVM processes), also repeat_check.csv: T_seq, T_1, T_2, S(1) and S(2) of every run side by side.
 """
 import argparse
 from pathlib import Path
@@ -119,6 +121,21 @@ def main():
                     "largest_attempted_n": int(g[g.status != "skipped_after_failure"].n.max()),
                     "first_failure": (f"n={int(bad.n.min())}: {bad.sort_values('n').status.iloc[0]}" if len(bad) else "")})
     pd.DataFrame(lim).to_csv(rd / "limits.csv", index=False)
+
+    # ------------------------------------------------------------------ repeat runs (between-process check)
+    runs = [("main", df)] + [(p.parent.name, pd.read_csv(p)) for p in sorted(rd.glob("repeat*/raw_measurements.csv"))]
+    if len(runs) > 1:
+        rows = []
+        for name, d in runs:
+            m = d.groupby(["method", "threads", "n"])["seconds_per_op"].median()
+            for n in sorted(d[d.method == "seq"].n.unique()):
+                if ("par", 1, n) in m and ("par", 2, n) in m:
+                    t_seq, t1, t2 = m[("seq", 1, n)], m[("par", 1, n)], m[("par", 2, n)]
+                    rows.append({"run": name, "n": n, "t_seq_median": t_seq, "t_par1_median": t1,
+                                 "t_par2_median": t2, "speedup_p1": t_seq / t1, "speedup_p2": t_seq / t2,
+                                 "efficiency_p2": t_seq / t2 / 2})
+        R = pd.DataFrame(rows).sort_values(["n", "run"])
+        R.to_csv(rd / "repeat_check.csv", index=False)
 
     print(f"tables and figures -> {rd}")
 
